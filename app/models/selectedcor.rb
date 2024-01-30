@@ -1,0 +1,2 @@
+class Selectedcor < ApplicationRecord
+end

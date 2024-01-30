@@ -1,6 +1,10 @@
 <% @semesters.each do |semester| %>
     <h3> <%= semester.name %> </h3>
-
-    
-
+    <% @subjects.each do |subject| %>
+        <% if subject.semester_id == semester.id %>
+        <h3> <%= subject.name %> </h3>
+        <% end %>
+    <% end %>
 <% end %>
+
+

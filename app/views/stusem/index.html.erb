@@ -1,0 +1,9 @@
+<% @semesters.each do |semester| %>
+    <h3> <%= semester.name %> </h3>
+    <% @subjects.each do |subject| %>
+      <% if subject.semester_id == semester.id %>
+        <li> <%= subject.name %> </li>
+        <%= button_to "Select Course", stusem_create_path(semester_id: semester.id, subject_id: subject.id), method: :post %>
+      <% end %>
+    <% end %>
+  <% end %>

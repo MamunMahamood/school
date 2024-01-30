@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'stusem/index'
+  post 'stusem/create'
   get 'dept/index'
   resources :subjects
   resources :semesters
