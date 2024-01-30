@@ -1,4 +1,11 @@
-<% @semesters.each do |semester| %>
+<% flash.each do |type, message| %>
+    <div class="alert alert-<%= type %>">
+      <%= message %>
+    </div>
+  <% end %>
+
+  <% if @semesters.present? %>
+  <% @semesters.each do |semester| %>
     <h3> <%= semester.name %> </h3>
     <% @subjects.each do |subject| %>
       <% if subject.semester_id == semester.id %>
@@ -7,3 +14,7 @@
       <% end %>
     <% end %>
   <% end %>
+<% else %>
+  <p>No semesters available.</p>
+<% end %>
+

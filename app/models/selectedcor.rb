@@ -1,2 +1,3 @@
 class Selectedcor < ApplicationRecord
+   
 end
